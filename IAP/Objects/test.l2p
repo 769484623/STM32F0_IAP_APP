@@ -1,0 +1,16 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\stm32f0xx_it.o"
+".\objects\system_stm32f0xx.o"
+".\objects\bsp.o"
+".\objects\flashop.o"
+".\objects\stm32f0xx_gpio.o"
+".\objects\stm32f0xx_spi.o"
+".\objects\stm32f0xx_rcc.o"
+".\objects\stm32f0xx_usart.o"
+".\objects\stm32f0xx_flash.o"
+".\objects\startup_stm32f0xx.o"
+--library_type=microlib --strict --scatter ".\Objects\test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\test.map" -o .\Objects\test.axf
